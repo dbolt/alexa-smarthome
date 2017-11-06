@@ -1,3 +1,5 @@
+#!/bin/sh
+
 ZIP=python.zip
 FUNCTION_NAME=bolt-smart-home
 
