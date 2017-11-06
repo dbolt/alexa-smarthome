@@ -1,4 +1,4 @@
-
+.DS_STORE
 sample_lambda/python/python.zip
 *.txt
 sample_lambda/python/alexa_smart_home_message_schema.json
