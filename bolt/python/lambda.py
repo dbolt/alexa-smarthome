@@ -58,51 +58,27 @@ SAMPLE_APPLIANCES = [
     {
         "applianceId": "endpoint-002",
         "manufacturerName": "Sample Manufacturer",
-        "modelName": "Smart Light",
+        "modelName": "Smart Thermostat",
         "version": "1",
-        "friendlyName": "Light",
-        "friendlyDescription": "002 Light that is dimmable and can change color and color temperature",
+        "friendlyName": "Thermostat",
+        "friendlyDescription": "002 Thermostat that can change and query temperatures",
         "isReachable": True,
         "actions": [
-            "turnOn",
-            "turnOff",
-            "setPercentage",
-            "incrementPercentage",
-            "decrementPercentage",
-            "setColor",
-            "setColorTemperature",
-            "incrementColorTemperature",
-            "decrementColorTemperature"
+            "setTargetTemperature",
+            "incrementTargetTemperature",
+            "decrementTargetTemperature",
+            "getTargetTemperature",
+            "getTemperatureReading"
         ],
         "additionalApplianceDetails": {}
     },
     {
         "applianceId": "endpoint-003",
-        "manufacturerName": "Sample Manufacturer",
-        "modelName": "Smart White Light",
-        "version": "1",
-        "friendlyName": "White Light",
-        "friendlyDescription": "003 Light that is dimmable and can change color temperature only",
-        "isReachable": True,
-        "actions": [
-            "turnOn",
-            "turnOff",
-            "setPercentage",
-            "incrementPercentage",
-            "decrementPercentage",
-            "setColorTemperature",
-            "incrementColorTemperature",
-            "decrementColorTemperature"
-        ],
-        "additionalApplianceDetails": {}
-    },
-    {
-        "applianceId": "endpoint-004",
-        "manufacturerName": "Sample Manufacturer",
+        "manufacturerName": "Raspberry Pi",
         "modelName": "Smart Thermostat",
         "version": "1",
-        "friendlyName": "Thermostat",
-        "friendlyDescription": "004 Thermostat that can change and query temperatures",
+        "friendlyName": "Hot Tub",
+        "friendlyDescription": "Hot tub controlled by raspberry pi",
         "isReachable": True,
         "actions": [
             "setTargetTemperature",
@@ -111,77 +87,6 @@ SAMPLE_APPLIANCES = [
             "getTargetTemperature",
             "getTemperatureReading"
         ],
-        "additionalApplianceDetails": {}
-    },
-    {
-        "applianceId": "endpoint-004-1",
-        "manufacturerName": "Sample Manufacturer",
-        "modelName": "Smart Thermostat Dual",
-        "version": "1",
-        "friendlyName": "Living Room Thermostat",
-        "friendlyDescription": "004-1 Thermostat that can change and query temperatures, supports dual setpoints",
-        "isReachable": True,
-        "actions": [
-            "setTargetTemperature",
-            "incrementTargetTemperature",
-            "decrementTargetTemperature",
-            "getTargetTemperature",
-            "getTemperatureReading"
-        ],
-        "additionalApplianceDetails": {}
-    },
-    {
-        "applianceId": "endpoint-005",
-        "manufacturerName": "Sample Manufacturer",
-        "modelName": "Smart Lock",
-        "version": "1",
-        "friendlyName": "Lock",
-        "friendlyDescription": "005 Lock that can be locked and can query lock state",
-        "isReachable": True,
-        "actions": [
-            "setLockState",
-            "getLockState"
-        ],
-        "additionalApplianceDetails": {}
-    },
-    {
-        "applianceId": "endpoint-006",
-        "manufacturerName": "Sample Manufacturer",
-        "modelName": "Smart Scene",
-        "version": "1",
-        "friendlyName": "Good Night Scene",
-        "friendlyDescription": "006 Scene that can only be turned on",
-        "isReachable": True,
-        "actions": [
-            "turnOn"
-        ],
-        "additionalApplianceDetails": {}
-    },
-    {
-        "applianceId": "endpoint-007",
-        "manufacturerName": "Sample Manufacturer",
-        "modelName": "Smart Activity",
-        "version": "1",
-        "friendlyName": "Watch TV",
-        "friendlyDescription": "007 Activity that runs sequentially that can be turned on and off",
-        "isReachable": True,
-        "actions": [
-            "turnOn",
-            "turnOff"
-            ],
-        "additionalApplianceDetails": {}
-    },
-    {
-        "applianceId": "endpoint-008",
-        "manufacturerName": "Sample Manufacturer",
-        "modelName": "Smart Camera",
-        "version": "1",
-        "friendlyName": "Baby Camera",
-        "friendlyDescription": "008 Camera that streams from an RSTP source",
-        "isReachable": True,
-        "actions": [
-            "retrieveCameraStreamUri"
-            ],
         "additionalApplianceDetails": {}
     }
 ]
