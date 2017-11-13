@@ -1,0 +1,13 @@
+{  
+    "dev": {  
+        "project_name": "bolt-smarthome",
+        "lambda_handler": "lambda.lambda_handler",
+        "lambda_description": "Provides the basic framework for a skill adapter for a smart home skill.",
+        "runtime": "python3.6",
+        "timeout_seconds": 7,
+        "s3_bucket": "zappa-bolt-smarthome",  
+        "apigateway_enabled": false,
+        "role_name": "bolt-dev-ZappaLambdaExecutionRole",
+        "keep_warm": false
+    }  
+}  

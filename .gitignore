@@ -1,5 +1,7 @@
 .DS_STORE
-sample_lambda/python/python.zip
+__pycache__
+python.zip
+virtualenv
 *.txt
 sample_lambda/python/alexa_smart_home_message_schema.json
 sample_lambda/python/lambda1.py
