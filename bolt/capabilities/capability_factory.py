@@ -12,11 +12,11 @@ class CapabilityFactory:
         self.discover = Discover(logger, device_registry)
 
         # power controller
-        self.turnOn = TurnOn(logger, iot)
-        self.turnOff = TurnOff(logger, iot)
+        self.turn_on = TurnOn(logger, iot, device_registry)
+        self.turn_off = TurnOff(logger, iot, device_registry)
 
         # state
-        self.reportState = ReportState(logger)
+        self.report_state = ReportState(logger, device_registry)
 
     def get(self, request):
         namespace = Utils.get_capability_namespace(request)
@@ -26,12 +26,12 @@ class CapabilityFactory:
             return self.discover
 
         if namespace == PowerController.NAMESPACE and name == TurnOn.NAME:
-            return self.turnOn
+            return self.turn_on
         if namespace == PowerController.NAMESPACE and name == TurnOff.NAME:
-            return self.turnOff
+            return self.turn_off
 
         if namespace == ReportState.NAMESPACE and name == ReportState.NAME:
-            return self.reportState
+            return self.report_state
 
         raise ValueError("Unable to handle %s.%s request" % (namespace, name))
 

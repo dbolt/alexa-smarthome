@@ -18,3 +18,7 @@ class Utils:
     @staticmethod
     def get_capability_name(request):
         return request['directive']['header']['name']
+
+    @staticmethod
+    def get_endpoint_id(request):
+        return request['directive']['endpoint']['endpointId']

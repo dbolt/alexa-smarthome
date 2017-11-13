@@ -10,12 +10,10 @@ class Discover(Capability):
 
     def __init__(self, logger, device_registry):
         self.logger = logger
-        self.device_registry = device_registry
+        self.device_registry = device_registry.get_state_for_device
 
     def handle(self, request):
-        devices = self.device_registry.devices_for_customer(request['directive']['payload']['scope']['token']) 
-
-        self.logger.info("Discover: Retrieved devices %s" % json.dumps(devices, indent=4, sort_keys=True))
+        devices = self.device_registry.get_devices_for_customer(request['directive']['payload']['scope']['token']) 
         return {
             "event": {
                 "header": {

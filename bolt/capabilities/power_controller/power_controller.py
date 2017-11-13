@@ -3,10 +3,15 @@ from utils import Utils
  
 class PowerController(Capability):
     NAMESPACE = 'Alexa.PowerController'
+    POWER_STATE = 'powerState'
 
-    def __init__(self, logger, iot):
+    # DDB Key
+    POWER_STATE_KEY = NAMESPACE + "." + POWER_STATE
+
+    def __init__(self, logger, iot, device_registry):
         self.logger = logger
         self.iot = iot
+        self.device_registry = device_registry
      
     def generate_response(self, request, state):
         return {
