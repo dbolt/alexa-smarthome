@@ -17,11 +17,6 @@ class LoginWithAmazon:
     @staticmethod
     def get_customer_profile(token):
         response = requests.get('https://api.amazon.com/auth/o2/tokeninfo?access_token=' + quote_plus(token)).json()
-
-        if response['aud'] != LoginWithAmazon.CLIENT_ID:
-            # the access token does not belong to us
-            raise BaseException("Invalid Token")
-
         url  = "https://api.amazon.com/user/profile"
         headers = {'Authorization': "bearer " + token}
         return requests.get(url, headers = headers).json()
